@@ -1,15 +1,15 @@
-import productServices from '../services/product.services.js'
+import productServices from "../services/product.services.js";
 
 const createProduct = async (req, res) => {
     try {
         const createdProduct = await productServices.createProduct();
-    
-        res.json(createdProduct);
+
+        res.status(201).json(createdProduct);
     } catch (error) {
-        res.json({
+        res.status(500).json({
             message: error.message,
-        })
+        });
     }
 };
 
-export default {createProduct};
+export default { createProduct };
