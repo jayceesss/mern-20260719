@@ -1,0 +1,37 @@
+{
+  "name": "mern-20260719-api",
+  "version": "1.0.0",
+  "description": "This is MERN cours",
+  "keywords": [
+    "API",
+    "MERN",
+    "MONGODB",
+    "EXPRESS",
+    "REACT",
+    "NEXTJS"
+  ],
+  "homepage": "https://github.com/jayceesss/mern-20260719#readme",
+  "bugs": {
+    "url": "https://github.com/jayceesss/mern-20260719/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayceesss/mern-20260719.git"
+  },
+  "license": "ISC",
+  "author": "JAYCEES",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
