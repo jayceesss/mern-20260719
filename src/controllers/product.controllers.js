@@ -1,7 +1,7 @@
-import productServices from "../services/user.services.js";
+import productServices from "../services/product.services.js";
 
-const createProduct = async (req, res) => {
-    producServices.createProduct();
+const createProduct = (req, res) => {
+   productServices.createProduct();
 
     res.send("Product Created.");
 }
