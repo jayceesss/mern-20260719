@@ -16,8 +16,8 @@ app.get('/about', (req, res) => {
     res.send("about page")
 });
 
-app.use('/users', userRoute );
-app.use('/products', productRoute);
+app.use('/api/users', userRoute );
+app.use('/api/products', productRoute);
 
 
 app.listen(config.port, () => {
