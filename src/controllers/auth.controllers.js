@@ -9,9 +9,9 @@ const login = (req, res) => {
 const register = async (req, res) => {
 
     try {
-        const data = await authServices.register();
+        const data = await authServices.register(req.body);
     
-        res.json(req.body);
+        res.json(data);
         
     } catch (error) {
         res.status(400).json({

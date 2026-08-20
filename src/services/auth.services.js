@@ -2,16 +2,16 @@ import User from "../models/User.js";
 
 const login = () => {};
 
-const register = async () => {
-    await User.create({
-        name: "Kala Chaudhary",
-        email: "kala@gmail.com",
-        phone: 9800000005,
-        password: "123456",
-        address: {
-            city: "Dulari",
-        },
+const register = async (input) => {
+    return await User.create({
+        name: input.name,
+        email: input.email,
+        password: input.password,
+        address: input.address,
+        phone: input.phone,
     });
+
+    
 };
 
 export default {login, register};

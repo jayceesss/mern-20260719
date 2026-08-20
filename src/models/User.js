@@ -3,7 +3,7 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "User name is required."],
-        minLength: 5,
+        minLength: 3,
         maxLength: 50,
     },
     email: {
@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         required: [true, "Email cannot be empty."],
         minLength: 10,
         maxLength: 40,
-        unique: true,
+        unique: [true, "Email already exist."],
         lowercase: true,
         validate: {
             validator: (value) => {
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
         minLength: 6,
         maxLength: 15,
         required: [true, "Phone number cannot be empty."],
-        unique: true,
+        unique: [true, "Phone already exist."],
     },
     createdAt: {
         type: Date,
